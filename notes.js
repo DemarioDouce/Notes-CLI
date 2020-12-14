@@ -5,6 +5,10 @@ const loadNotes = function() {
 
     //stores the buffer of the file
     let dataBuffer = fs.readFileSync("notes.json")
+    //convert buffer to string
+    let dataJSON = dataBuffer.toString()
+    //return parse data
+    return JSON.parse(dataJSON)
 
 }
 
