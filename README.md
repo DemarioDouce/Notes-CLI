@@ -1,1 +1,4 @@
-# NotesApp
+# Notes App
+## Learning project
+---
+
