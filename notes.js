@@ -39,13 +39,28 @@ return "Your notes......"
  const addNote = function(title,body) {
 
     let notes = loadNotes()
+    let duplicateNotes = notes.filter(function(note) {
 
-    notes.push({
-        title:title,
-        body:body
-    })
+        return note.title === title
+    }) 
 
-    saveNotes(notes)
+    if(duplicateNotes.length === 0) {
+
+        notes.push({
+            title:title,
+            body:body
+        })
+    
+        saveNotes(notes)
+
+        console.log("New note added.")
+    } else {
+
+        console.log("Note title taken")
+
+    }
+
+    
 
 
  }
