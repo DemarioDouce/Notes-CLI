@@ -99,11 +99,30 @@ return "Your notes......"
     
 
  }
+
+ const readNote = (title) => {
+
+    let notes = loadNotes()
+    let notesToShow = notes.find(note => note.title === title);
+
+    if (notesToShow){
+
+        console.log(chalk.blue("Title:" + notesToShow.title + " Body:" + notesToShow.body));
+
+    } else {
+
+        console.log(chalk.red("No note found"));
+
+    }
+
+
+ }
 //export
  module.exports = {
 
     getNotes: getNotes,
     addNote: addNote,
     removeNote: removeNote,
-    listNotes: listNotes
+    listNotes: listNotes,
+    readNote: readNote
  }

@@ -2,9 +2,10 @@
 const validator = require('validator')
 const chalk = require('chalk');
 const yargs = require('yargs')
-const { demand } = require('yargs');
+const { demand, demandOption } = require('yargs');
 //local
 const notes = require("./notes.js");
+const { readNote } = require('./notes.js');
 
 //customize yargs 
 yargs.version("1.0")
@@ -80,9 +81,17 @@ yargs.command({
 
     command:"read",
     describe:"read note",
-    handler: () => {
+    builder: {
+        title: {
+
+            describe: "Note title",
+            demandOption: true,
+            type: "String"
+        }
+    },
+    handler: (argv) => {
     
-        console.log("Reading note...")
+        notes.readNote(argv.title)
     }
     
     })
