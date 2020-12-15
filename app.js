@@ -70,7 +70,7 @@ yargs.command({
     describe:"List notes",
     handler: () => {
     
-        console.log("Listing notes...")
+        notes.listNotes()
     }
     
     })
