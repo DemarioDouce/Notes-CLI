@@ -1,6 +1,6 @@
 # Notes
 ---
 ## Screenshot
-![Mockup image.](/Mockups/MockupHomepage.png)
+![Mockup image.](/Mockups/MockupNotes.png)
 ---
 
