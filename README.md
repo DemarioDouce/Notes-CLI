@@ -1,4 +1,6 @@
-# Notes App
-## Learning project
+# Notes
 ---
-Simple notes app.
+## Screenshot
+![Mockup image.](/Mockups/MockupHomepage.png)
+---
+
